@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-contact',
-  standalone: true, // ✅ Mark as standalone
-  imports: [NgFor, NgIf, FormsModule], // ✅ Import FormsModule
+  standalone: true, 
+  imports: [FormsModule],
   templateUrl: './add-contact.component.html',
   styleUrls: ['./add-contact.component.css']
 })

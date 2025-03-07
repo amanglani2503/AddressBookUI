@@ -1,10 +1,10 @@
 <div class="form-container">
   <div class="form-header">
-    <h2>PERSON ADDRESS FORM</h2>
-    <button class="close-btn">✖</button>
+    <h2>Edit Contact</h2>
+    <button class="close-btn" (click)="onCancel()">✖</button>
   </div>
 
-  <form (ngSubmit)="onSubmit()"> 
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)"> 
     <div class="form-group">
       <label>Full Name</label>
       <input type="text" [(ngModel)]="contact.name" name="name" placeholder="Enter full name" required />
@@ -15,7 +15,6 @@
       <input type="text" [(ngModel)]="contact.phone" name="phone" placeholder="Enter phone number" required />
     </div>
 
-    
     <div class="form-group">
       <label>Email</label>
       <input type="email" [(ngModel)]="contact.email" name="email" placeholder="Enter email" required />
@@ -44,7 +43,7 @@
     </div>
 
     <div class="btn-group">
-      <button type="submit" class="btn-primary">Add</button>
+      <button type="submit" class="btn-primary">Update</button>
       <button type="reset" class="btn-secondary">Reset</button>
     </div>
   </form>
